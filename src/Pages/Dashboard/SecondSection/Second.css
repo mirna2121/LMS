@@ -1,0 +1,21 @@
+.scrol-div::-webkit-scrollbar {
+    width: 12px;
+    padding: 6px;
+}
+
+.scrol-div::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, #6c3d2a, #764b36);
+    border-radius: 10px;
+    border: 2px solid #72513ab4;
+}
+
+.scrol-div::-webkit-scrollbar-thumb {
+    background-color: #a97445;
+    box-shadow: 0 0 1.5rem 1rem rgba(239, 143, 17, 0.16);
+    border-radius: 10px;
+
+}
+
+.scrol-div::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ab774c, #c08250);
+}
