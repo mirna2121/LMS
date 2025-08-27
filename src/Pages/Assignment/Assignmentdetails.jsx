@@ -1,5 +1,7 @@
 import { useState, useRef } from "react";
 import { FaDownLong } from "react-icons/fa6";
+import book from "../../assets/bookk.svg";
+import sabar from "../../assets/sabaraa.svg";
 
 export default function Assignmentdetails() {
   const [files, setFiles] = useState([]);
@@ -49,26 +51,19 @@ export default function Assignmentdetails() {
   };
 
   return (
-    <div className="w-full flex flex-col p-14 pt-32 items-center">
-      <h1 className="text-yellow-950/90 h-8 py-2 px-2 text-5xl font-serif pb-24">
-        Send your Assignment easily
-      </h1>
-      <div className="h-[80vh] w-full p-6 bg-yellow-50/20 border-10 border-yellow-950/90 flex gap-5 flex-col rounded-4xl">
-        <h1 className=" text-yellow-950/90 font-serif text-4xl">
-          Assignment Activity
-        </h1>
+    <div className="w-full flex flex-row items-center justify-center p-4 border-4 border-dotted rounded-4xl border-green-800">
+      <img className="relative bottom-20 left-4" src={sabar} alt="" />
+      <div className="h-[80vh] w-[900px] p-4 bg-transparent flex items-center justify-center gap-5 flex-col rounded-4xl ">
+        <h1 className=" text-black font-serif text-5xl">Assignment Activity</h1>
 
-        <div className="file w-full justify-between flex flex-col xl:flex-row h-[80%]">
-          <h1 className="text-2xl text-yellow-950/90 font-serif">
-            File Submissions
-          </h1>
-          <div className="box xl:w-[70%] h-[80%] w-full bg-yellow-50/20 border-4 border-yellow-950/70 shadow-lg rounded-4xl  flex flex-col p-3 items-center">
-            <h1 className="text-yellow-950/90 text-xl font-serif mb-4">
+        <div className="file w-full items-center justify-center flex flex-col xl:flex-row h-[70%] pt-4">
+          <div className="box xl:w-[86%] h-[90%] w-full border-4 border-green-900 rounded-4xl  flex flex-col p-3 items-center">
+            <h1 className="text-black text-xl font-serif mb-4">
               Maximum file size 1 MB, Maximum number of file: 10
             </h1>
 
             <div className="icons flex gap-4 mb-4">
-              {/* هذه المنطقة فارغة بعد حذف الأيقونات */}
+              {/* empty after filling data */}
               <input
                 type="file"
                 accept=".pdf"
@@ -83,18 +78,18 @@ export default function Assignmentdetails() {
               onClick={handleBrowseFiles}
               onDrop={handleDrop}
               onDragOver={(e) => e.preventDefault()}
-              className="dragBox w-[90%] h-[54%] border-3 shadow-md border-yellow-950/70 rounded-4xl bg-yellow-50/20 flex flex-col items-center justify-center gap-3 p-3 hover:translate-y-1 cursor-pointer"
+              className="dragBox w-[80%] h-[60%] border-3 shadow-md border-green-900 rounded-4xl  flex flex-col items-center justify-center gap-3 p-3 hover:bg-green-50 cursor-pointer"
             >
-              <FaDownLong className="xl:text-6xl  lg:text-6xl md:text-6xl text-3xl text-yellow-950/70" />
-              <p className="text-yellow-950/90 font-serif text-xl text-center">
+              <FaDownLong className="xl:text-6xl  lg:text-6xl md:text-6xl text-3xl text-green-900" />
+              <p className="text-black font-sans text-md text-center">
                 You can drag and drop PDF files here or click to browse
               </p>
             </div>
 
             {/* Preview of files */}
-            <div className="scroll pt-3 w-full font-serif font-bold text-yellow-950 overflow-auto">
+            <div className="scroll pt-3 w-full font-serif font-bold text-black overflow-auto">
               {files.map((file, index) => (
-                <div key={index} className="text-sm text-yellow-950/90">
+                <div key={index} className="text-sm text-black">
                   • {file.name}
                 </div>
               ))}
@@ -102,21 +97,22 @@ export default function Assignmentdetails() {
           </div>
         </div>
 
-        <div className="buttons w-full h-[40px] gap-5 flex items-center justify-between">
+        <div className="buttons  w-[800px] h-[50px] flex justify-around items-center">
           <button
             onClick={handleSave}
-            className="w-[48%] h-[50px] rounded-2xl cursor-pointer hover:translate-y-2 text-amber-50 font-serif text-2xl bg-yellow-950/70 shadow-lg"
+            className="w-[20%] h-[50px] rounded-2xl cursor-pointer hover:translate-y-0.5 text-white font-sans text-[20px] bg-green-900 shadow-md shadow-green-900"
           >
             Save changes
           </button>
           <button
             onClick={handleCancel}
-            className="w-[48%] h-[50px] rounded-2xl cursor-pointer hover:translate-y-2 text-amber-50 font-serif text-2xl bg-yellow-950/70 shadow-lg"
+            className="w-[20%] h-[50px] rounded-2xl cursor-pointer hover:translate-y-0.5 text-white font-sans text-[20px] bg-green-900 shadow-md shadow-green-900"
           >
             Cancel
           </button>
         </div>
       </div>
+      <img className="relative top-32 left-6" src={book} alt="" />
     </div>
   );
 }

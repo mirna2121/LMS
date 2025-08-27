@@ -5,22 +5,22 @@ import Img4 from "../../../assets/aboutUs4.png"
 
 export default function LeftComponent() {
   return (
-    <div className=' flex flex-wrap gap-8 justify-between  w-[50%]'>
-       <div className='content h-[30%] w-[47%] p-2 gap-20  flex flex-row items-center border-4 border-yellow-950/90 rounded-tr-4xl rounded-bl-4xl'>
-        <img className="w-[70px] h-[70px] rounded-2xl" src={Img1} alt="" />
-        <h1 className='font-bold  text-yellow-950/90 text-[20px]'>Child Friendly Environment</h1>
+    <div className='flex flex-wrap justify-between w-[50%] h-[330px] items-center bg-white px-3 rounded-3xl'>
+       <div className='content h-[40%] w-[47%] p-2 flex flex-row items-center'>
+        <img className="w-[90px] h-[90px] rounded-2xl" src={Img1} alt="" />
+        <h1 className='font-bold  text-black text-center text-[20px]'>Child Friendly Environment</h1>
        </div>
-       <div className='content h-[30%] w-[47%] p-2 gap-20  flex flex-row items-center border-4 border-yellow-950/90 rounded-tr-4xl rounded-bl-4xl'>
-        <img className="w-[70px] h-[70px] rounded-2xl" src={Img2} alt="" />
-        <h1 className='font-bold  text-yellow-950/90 text-[20px]'>Well-Built Infrastructure</h1>
+       <div className='content  h-[40%] w-[47%] p-2 gap-6 flex flex-row items-center  rounded-tr-4xl'>
+        <img className="w-[90px] h-[90px] rounded-2xl" src={Img2} alt="" />
+        <h1 className='font-bold  text-black text-center text-[20px]'>Well-Built Infrastructure</h1>
        </div>
-       <div className='content h-[30%] w-[47%] p-2 gap-20  flex flex-row items-center border-4 border-yellow-950/90 rounded-tr-4xl rounded-bl-4xl'>
-        <img className="w-[70px] h-[70px] rounded-2xl" src={Img3} alt="" />
-        <h1 className='font-bold  text-yellow-950/90 text-[20px]'>Professional Staff Members</h1>
+       <div className='content  h-[40%] w-[47%] p-2   flex flex-row items-center  rounded-tr-4xl'>
+        <img className="w-[90px] h-[90px] rounded-2xl" src={Img3} alt="" />
+        <h1 className='font-bold  text-black text-center text-[20px]'>Professional Staff Members</h1>
        </div>
-       <div className='content h-[30%] w-[47%] p-2 gap-20  flex flex-row items-center border-4 border-yellow-950/90 rounded-tr-4xl rounded-bl-4xl'>
-        <img className="w-[70px] h-[70px] rounded-2xl" src={Img4} alt="" />
-        <h1 className='font-bold  text-yellow-950/90 text-[20px]'>Real-Time Education</h1>
+       <div className='content  h-[40%] w-[47%] p-2 gap-10 flex flex-row items-center  rounded-tr-4xl'>
+        <img className="w-[90px] h-[90px] rounded-2xl" src={Img4} alt="" />
+        <h1 className='font-bold  text-black text-center text-[20px]'>Real-Time Education</h1>
        </div>
     </div>
   )

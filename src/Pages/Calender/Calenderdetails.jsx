@@ -5,11 +5,11 @@ import { IoIosArrowForward } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
 import { FaRegEdit } from "react-icons/fa";
 import { TiDelete } from "react-icons/ti";
+import { div } from "framer-motion/client";
 
 
-export default function Calenderdetails() {
-
-   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+export default function Calender() {
+  const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const monthsOfYear = [
     "january",
     "February",
@@ -124,38 +124,37 @@ export default function Calenderdetails() {
   };
 
   return (
-    <div>
-       <div className="w-full h-full flex flex-col  items-center overflow-hidden py-3 px-14 pt-28">
-      <h1 className="text-yellow-950/90 h-8 py-2 px-2 text-5xl font-serif pb-24">Calender</h1>
+   <div className="h-[650px] w-full p-6 flex items-center justify-center">
+     <div className="w-[1150px] rounded-2xl h-[570px] flex flex-col overflow-hidden shadow-lg shadow-cyan-400/80">
       
       <div
-        className="Calender rounded-4xl h-[80vh] w-full bg-amber-100/10  flex gap-4 py-2 md:flex-col flex-col border-8 border-yellow-950/90 shadow-lg shadow-yellow-950/40 overflow-hidden md:items-center lg:items-start
+        className="Calender h-full w-full bg-purple-900  flex gap-4 rounded-2xl py-4 md:flex-col xl:flex-row flex-col border-8 border-cyan-500 overflow-hidden md:items-center lg:items-start
        items-center xl:items-start "
       >
         <div className="navigateDate flex xl:gap-9 lg:gap-9 gap-2 motion-reduce: flex-col md:items-center md:gap-2 xl:items-start xl:pl-8">
-          <h1 className="Calender xl:text-4xl lg:text-4xl text-3xl pl-4 text-yellow-950 md:text-[30px]  md:h-14 ">
+          <h1 className="Calender xl:text-4xl lg:text-4xl text-3xl pl-4 text-white md:text-[30px]  md:h-14 ">
             Calender
           </h1>
 
           <div className="header-date flex justify-between items-center xl:w-[398px] lg:w-[398px] md:w-[300px] w-[220px] pl-4 md:items-center">
             <div className="flex">
-              <h2 className="month xl:text-[28px] lg:text-[28px] md:text-[28px] text-[20px]  text-yellow-950/90 font-serif font-bold">
+              <h2 className="month xl:text-[28px] lg:text-[28px] md:text-[28px] text-[20px]  text-white">
                 {monthsOfYear[currentMonth]},
               </h2>
-              <h2 className="year xl:text-[28px] lg:text-[28px] md:text-[28px] text-[20px]  text-yellow-950/90 font-serif font-bold">
+              <h2 className="year xl:text-[28px] lg:text-[28px] md:text-[28px] text-[20px]  text-white">
                 {currentYear}
               </h2>
             </div>
             <div className="buttons flex gap-1">
               <i
                 onClick={prevMonth}
-                className="left text-yellow-950/90 rounded-3xl w-5 h-5 bg-yellow-950/40 flex items-center justify-center"
+                className="left text-white rounded-3xl w-5 h-5 bg-cyan-300/30 shadow-md shadow-white flex items-center justify-center"
               >
                 <IoIosArrowBack />
               </i>
               <i
                 onClick={nextMonth}
-                className="right text-yellow-950/90 rounded-3xl w-5 h-5 bg-yellow-950/40 flex items-center justify-center"
+                className="right text-white rounded-3xl w-5 h-5 bg-cyan-300/30 shadow-md shadow-white flex items-center justify-center"
               >
                 <IoIosArrowForward />
               </i>
@@ -164,7 +163,7 @@ export default function Calenderdetails() {
 
           {/* */}
 
-          <div className="weekdays w-full flex xl:gap-5 lg:gap-5 md:gap-5 gap-0.5 text-yellow-950/70 text-[10px] xl:pl-2 lg:pl-2 md:pl-2 pl-0.5 md:h-[5px] ">
+          <div className="weekdays w-full flex xl:gap-5 lg:gap-5 md:gap-5 gap-0.5 text-white text-[10px] xl:pl-2 lg:pl-2 md:pl-2 pl-0.5 md:h-[5px] ">
             {daysOfWeek.map((day) => (
               <span
                 className="xl:w-[39px] ld:w-[39px] md:w-[39px] w-[30px] flex justify-center font-bold  text-[14px]"
@@ -175,7 +174,7 @@ export default function Calenderdetails() {
             ))}
           </div>
 
-          <div className="days flex cursor-pointer flex-wrap  xl:gap-[31px] lg:gap-[31px] md:gap-[31px] gap-y-[0px] gap-[2px] md:gap-y-[10px] xl:gap-y-[20px] p-3 xl:w-[430px] lg:w-[430px] md:w-[430px] w-[240px]  text-yellow-950/90 text-[10px]">
+          <div className="days flex cursor-pointer flex-wrap  xl:gap-[31px] lg:gap-[31px] md:gap-[31px] gap-y-[0px] gap-[2px] md:gap-y-[10px] xl:gap-y-[20px] p-3 xl:w-[430px] lg:w-[430px] md:w-[430px] w-[240px]  text-white text-[10px]">
             {[...Array(firstDayOfMonth).keys()].map((_, index) => (
               <span
                 className="flex justify-center items-center xl:w-7 lg:w-7 md:w-7 w-4 h-7 text-[14px] "
@@ -200,15 +199,15 @@ export default function Calenderdetails() {
           </div>
         </div>
 
-        <div className="events w-full h-full flex flex-col gap-4 overflow-auto px-6">
+        <div className="events w-[630px] py-2 h-full flex flex-col gap-6 overflow-auto px-4">
           {showEventPopup && (
-            <div className="popup flex flex-col justify-center items-center gap-6 absolute xl:w-[420px] lg:w-[420px] md:w-[420px] w-[220px] h-[180px] xl:h-[300px] rounded-[8px] p-4 xl:top-[40%] lg:top-[35%] md:top-[36%] top-[40%] md:h-[200px] xl:left-[60rem] lg:left-[23rem] md:left-[17rem] left-[6rem] bg-abmer-100 border-4 border-yellow-950/90 shadow-lg shadow-slate-900/95 ">
+            <div className="popup flex flex-col justify-center items-center gap-6 absolute xl:w-[420px] lg:w-[420px] md:w-[420px] w-[220px] h-[180px] xl:h-[300px] rounded-[8px] p-4 xl:top-[800px] lg:top-[35%] md:top-[36%] top-[40%] md:h-[200px] xl:left-[220px] lg:left-[23rem] md:left-[17rem] left-[6rem] bg-purple-950 shadow-lg shadow-white/95 ">
               <div className="time-input flex gap-2 ">
-                <div className="events-popup-time w-[4rem]  bg-yellow-950/60 rounded-[1rem]  shadow-md shadow-yellow-950/60  flex justify-center items-center text-amber-100">
+                <div className="events-popup-time w-[4rem]  bg-cyan-400 rounded-[1rem]  shadow-sm shadow-white  flex justify-center items-center text-white">
                   Time
                 </div>
                 <input
-                  className="hours xl:w-[4rem] lg:w-[4rem] md:w-[4rem] w-[3rem] h-[2rem] text-center bg-transparent border  border-t-2 border-t-yellow-950/90 border-b-yellow-950/90 border-b-2 border-r-transparent border-l-transparent text-amber-950 webkit-appearancess"
+                  className="hours xl:w-[4rem] lg:w-[4rem] md:w-[4rem] w-[3rem] h-[2rem] text-center bg-transparent border  border-t-2 border-t-cyan-400 border-b-cyan-400 border-b-2 border-r-transparent border-l-transparent text-white webkit-appearancess"
                   type="number"
                   name="hours"
                   min={0}
@@ -217,7 +216,7 @@ export default function Calenderdetails() {
                   onChange={handleTimeChange}
                 />
                 <input
-                  className="minutes w-[4rem] h-[2rem] text-center bg-transparent border  border-t-2 border-t-yellow-950/90 border-b-yellow-950/90 border-b-2 border-r-transparent border-l-transparent text-yellow-950"
+                  className="minutes w-[4rem] h-[2rem] text-center bg-transparent border  border-t-2 border-t-cyan-400 border-b-cyan-400 border-b-2 border-r-transparent border-l-transparent text-white"
                   type="number"
                   name="minutes"
                   min={0}
@@ -228,7 +227,7 @@ export default function Calenderdetails() {
               </div>
 
               <textarea
-                className="xl:w-[20rem] lg:w-[20rem] md:w-[20rem] w-[13rem] resize-none bg-yellow-950/90 text-amber-100 border-none rounded-[4px] p-[1rem] "
+                className="xl:w-[20rem] lg:w-[20rem] md:w-[20rem] w-[13rem] resize-none bg-slate-900/50 text-white border-none rounded-[4px] p-[1rem] "
                 placeholder="Enter event text (Maximum 60 charactors)"
                 value={eventText}
                 onChange={(e) => {
@@ -238,14 +237,14 @@ export default function Calenderdetails() {
                 }}
               ></textarea>
               <button
-                className="events-popup-btn xl:w-[20rem] lg:w-[20rem] md:w-[20rem] w-[13rem] h-[2rem] rounded-[4px] bg-yellow-950/60 shadow-md shadow-yellow-950/60 text-amber-100 font-bold cursor-pointer hover:tracking-wider"
+                className="events-popup-btn xl:w-[20rem] lg:w-[20rem] md:w-[20rem] w-[13rem] h-[2rem] rounded-[4px] bg-yellow-300 shadow-md shadow-white text-white font-bold font-sans cursor-pointer hover:translate-y-1.5"
                 onClick={handleEventSubmit}
               >
                 {editEvent ? "Update Event" : "Add Event"}
               </button>
               <button
                 onClick={() => setShowEventPopup(false)}
-                className="close-events-popup absolute top-[1rem] right-[1rem] bg-transparent border-none cursor-pointer text-2xl text-yellow-950/90"
+                className="close-events-popup absolute top-[1rem] right-[1rem] bg-transparent border-none cursor-pointer text-2xl text-yellow-300"
               >
                 <IoIosClose />
               </button>
@@ -253,16 +252,16 @@ export default function Calenderdetails() {
           )}
           {events.map((event, index) => (
             <div
-              className="event w-full h-[5rem] bg-yellow-950/90  md:h-[80px] p-[1rem] gap-4 rounded-2xl flex items-center"
+              className="event w-[98%] h-[90%] bg-purple-950  md:h-[80px] p-[1rem] gap-4 rounded-2xl flex items-center"
               key={index}
             >
-              <div className="event-date-wrapper flex flex-col items-center w-[25%] pr-3 border border-transparent border-r-amber-200 ">
-                <div className="event-data xl:text-[20px] lg:text-[18px] md:text-[10px] text-[9px] text-amber-50">
+              <div className="event-date-wrapper flex flex-col items-center w-[25%] pr-3 border border-transparent border-r-white ">
+                <div className="event-data xl:text-[20px] lg:text-[18px] md:text-[10px] text-[9px] text-white">
                   {`${
                     monthsOfYear[event.date.getMonth()]
                   } ${event.date.getDate()}, ${event.date.getFullYear()}`}
                 </div>
-                <div className="event-time xl:text-[20px] lg:text-[18px] md:text-[12px] text-[9px] text-amber-50 font-bold">
+                <div className="event-time xl:text-[20px] lg:text-[18px] md:text-[12px] text-[9px] text-white font-bold">
                   {event.time}
                 </div>
               </div>
@@ -288,6 +287,6 @@ export default function Calenderdetails() {
         </div>
       </div>
     </div>
-    </div>
-  )
+   </div>
+  );
 }

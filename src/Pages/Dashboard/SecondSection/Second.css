@@ -4,18 +4,18 @@
 }
 
 .scrol-div::-webkit-scrollbar-track {
-    background: linear-gradient(180deg, #6c3d2a, #764b36);
+    background: linear-gradient(180deg, #65dbfc, #b682f4);
     border-radius: 10px;
-    border: 2px solid #72513ab4;
+    border: 2px solid #88d5f1ec;
 }
 
 .scrol-div::-webkit-scrollbar-thumb {
-    background-color: #a97445;
-    box-shadow: 0 0 1.5rem 1rem rgba(239, 143, 17, 0.16);
+    background-color: #7cd6ff;
+    box-shadow: 0 0 1.5rem 1rem rgba(186, 122, 235, 0.16);
     border-radius: 10px;
 
 }
 
 .scrol-div::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #ab774c, #c08250);
+    background: linear-gradient(180deg, #d28fff, #7bb9efd7);
 }

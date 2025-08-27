@@ -43,61 +43,47 @@ export const useLinks = create(() => ({
       icon: <SiGoogleclassroom className="h-5 w-5 text-amber-100 " />,
       path: "/TeacherClassroom",
     },
-    {
-      name: "Messages",
-      icon: <BiMessageSquareDetail className="h-5 w-5 text-amber-100 " />,
-      path: "/messages",
-    },
+    
     ],
     studentLinks: [
     {
       name: "Home",
-      icon: <IoHome className="h-5 w-5 text-amber-100 " />,
+      icon: <IoHome className="h-5 w-5 text-purple-500 " />,
       path: "/",
     },
     {
       name: "Dashboard",
-      icon: <MdDashboard className="h-5 w-5 text-amber-100 " />,
+      icon: <MdDashboard className="h-5 w-5 text-purple-500  " />,
       path: "/dashboard",
     },
     {
       name: "Courses",
-      icon: <GoStarFill className="h-5 w-5 text-amber-100 " />,
+      icon: <GoStarFill className="h-5 w-5 text-purple-500  " />,
       path: "/courses",
     },
     {
       name: "Library",
-      icon: <IoLibrary className="h-5 w-5 text-amber-100 " />,
+      icon: <IoLibrary className="h-5 w-5 text-purple-500 " />,
       path: "/library",
     },
     {
       name: "Exam",
-      icon: <PiNewspaperBold className="h-5 w-5 text-amber-100" />,
+      icon: <PiNewspaperBold className="h-5 w-5 text-purple-500 " />,
       path: "/exam",
     },
     {
       name: "Calender",
-      icon: <SlCalender className="h-5 w-5 text-amber-100 " />,
+      icon: <SlCalender className="h-5 w-5 text-purple-500 " />,
       path: "/calender",
     },
     {
-      name: "Messages",
-      icon: <BiMessageSquareDetail className="h-5 w-5 text-amber-100 " />,
-      path: "/message",
-    },
-    {
-      name: "Classroom",
-      icon: <SiGoogleclassroom className="h-5 w-5 text-amber-100 " />,
-      path: "/classroom",
-    },
-    {
       name: "Assignments",
-      icon: <MdOutlineAssignment className="h-5 w-5 text-amber-100 " />,
+      icon: <MdOutlineAssignment className="h-5 w-5 text-purple-500 " />,
       path: "/assignment",
     },
     {
       name: "Integrations",
-      icon: <RiMastercardLine className="h-5 w-5 text-amber-100 " />,
+      icon: <RiMastercardLine className="h-5 w-5 text-purple-500 " />,
       path: "/integration",
     },
     

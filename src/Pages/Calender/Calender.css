@@ -15,10 +15,10 @@ textarea:focus::placeholder {
 }
 
 .current-day {
-    background-color: #694937;
-    color: antiquewhite;
+    background-color: #25c6cc;
+    color: white;
     border-radius: 50%;
-    box-shadow: 0 0 1.5rem 1rem rgba(101, 31, 10, 0.3);
+    box-shadow: 0 0 1.5rem 1rem rgba(189, 237, 233, 0.3);
 }
 
 .events::-webkit-scrollbar {
@@ -27,18 +27,17 @@ textarea:focus::placeholder {
 }
 
 .events::-webkit-scrollbar-track {
-    background: linear-gradient(180deg, #612c0d, #917152);
+    background: linear-gradient(180deg, #18bed4, #9849e1);
     border-radius: 10px;
-    border: 2px solid #0a0f2c;
+    border: 2px solid #6e83f8;
 }
 
 .events::-webkit-scrollbar-thumb {
-    background-color: #ad8c63;
-    box-shadow: 0 0 1.5rem 1rem rgba(239, 143, 17, 0.16);
+    background-color: #78dcfe;
+    box-shadow: 0 0 1.5rem 1rem rgba(70, 215, 223, 0.16);
     border-radius: 10px;
-
 }
 
 .events::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #4f1d0a, #a07b47);
+    background: linear-gradient(180deg, #973bd4, #9aeded);
 }
